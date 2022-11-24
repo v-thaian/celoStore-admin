@@ -1,0 +1,64 @@
+[
+    {
+        "display_name": "Dashboard",
+        "route": "/",
+        "icon": "bx bx-category-alt"
+    },
+    {
+        "display_name": "Tài khoản",
+        "route": "/accounts",
+        "add": "/add-account",
+        "modify": "/account-detail",
+        "icon": "bx bx-user-pin"
+    },
+    {
+        "display_name": "Sản phẩm",
+        "route": "/products",
+        "add": "/add-product",
+        "modify": "/product-detail",
+        "icon": "bx bx-package"
+    },
+    {
+        "display_name": "Đơn hàng",
+        "route": "/orders",
+        "add": "/add-order",
+        "modify": "/order-detail",
+        "sub": "/detail-order",
+        "icon": "bx bx-cart"
+    },
+    {
+        "display_name": "Voucher",
+        "route": "/vouchers",
+        "add": "/add-voucher",
+        "modify": "/voucher-detail",
+        "icon": "bx bx-bar-chart-alt"
+    },
+    {
+        "display_name": "Loại sản phẩm",
+        "route": "/categories",
+        "add": "/add-category",
+        "modify": "/category-detail",
+        "icon": "bx bx-list-ol"
+    },
+    {
+        "display_name": "Khuyến mãi",
+        "route": "/sale",
+        "add": "/add-sale",
+        "modify": "/sale-detail",
+        "icon": "bx bx-gift"
+    },
+    {
+        "display_name": "Thương hiệu",
+        "route": "/brand",
+        "add": "/add-brand",
+        "modify": "/brand-detail",
+        "icon": "bx bx-store-alt"
+    },
+    {
+        "display_name": "Hộp thoại",
+        "route": "/chat",
+        "add": "/chat",
+        "modify": "/chat",
+        "icon": "bx bx-user-pin"
+    }
+]
