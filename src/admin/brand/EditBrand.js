@@ -39,7 +39,7 @@ const EditBrand = () => {
   return (
     <div className="container-fluid card">
       <div className="col-10 offset-1 text-center">
-        <h2 className="text-danger">Thương hiệu</h2>
+        <h2 className="text-danger">Nhà xuất bản</h2>
       </div>
       <div className="row">
         <div className="col-10 offset-1">
@@ -49,7 +49,7 @@ const EditBrand = () => {
           >
             <div className="row g-3">
               <div className="col-sm-6">
-                <label className="form-label">Tên thương hiệu</label>
+                <label className="form-label">Tên nhà xuất bản</label>
                 <input
                   type="text"
                   className="form-control"

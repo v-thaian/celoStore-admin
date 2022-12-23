@@ -21,7 +21,7 @@ const NewCategory = () => {
     console.log(result);
     createCategory(result)
       .then(() => {
-        toast.success("Thêm mới loại sản phẩm thành công.");
+        toast.success("Thêm mới danh mục sách thành công.");
         history.push("/categories");
       })
       .catch((error) => toast.error(error.response.data.Errors));
@@ -30,7 +30,7 @@ const NewCategory = () => {
   return (
     <div className="container-fluid card">
       <div className="col-10 offset-1 text-center">
-        <h2 className="text-danger">Loại sản phẩm</h2>
+        <h2 className="text-danger">Danh mục sách</h2>
       </div>
       <div className="row">
         <div className="col-10 offset-1">
@@ -40,7 +40,7 @@ const NewCategory = () => {
           >
             <div className="row g-3">
               <div className="col-sm-6">
-                <label className="form-label">Tên loại sản phẩm</label>
+                <label className="form-label">Tên danh mục sách</label>
                 <input
                   type="text"
                   className="form-control"

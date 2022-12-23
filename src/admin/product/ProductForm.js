@@ -4,7 +4,7 @@ import "../image/CardProfile.css";
 import { getBrands } from "../../api/BrandApi";
 import { getSale } from "../../api/SaleApi";
 import { getCategory } from "../../api/CategoryApi";
-import logo from "../../assets/images/logo-sneaker.jpg";
+import logo from "../../assets/images/celo-logo.png";
 import { createProduct } from "../../api/ProductApi";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
@@ -77,7 +77,7 @@ const ProductForm = () => {
       const newNums = nums.slice(0, count);
       const hasDuplicate = newNums.some(x => newNums.indexOf(x) !== newNums.lastIndexOf(x));
       if(hasDuplicate){
-        toast.warning("Nhập trùng size. Vui lòng nhập lại!");
+        toast.warning("Nhập trùng loại. Vui lòng nhập lại!");
       }else{
         const flag = {
           name: data.name,
@@ -147,7 +147,7 @@ const ProductForm = () => {
                 .then((resp) => console.log(resp.data))
                 .catch((error) => console.log(error.response.data));
             });
-            toast.success("Thêm mới sản phẩm thành công");
+            toast.success("Thêm mới sách thành công");
             history.push("/products");
           })
           .catch((error) => toast.error(error.response.data.Errors));
@@ -172,7 +172,7 @@ const ProductForm = () => {
           <div className="col-10">
             <div className="row g-3">
               <div className="col-sm-6">
-                <label className="form-label">Tên sản phẩm</label>
+                <label className="form-label">Tên sách</label>
                 <input
                   type="text"
                   className="form-control"
@@ -183,7 +183,7 @@ const ProductForm = () => {
                 />
                 {errors.name && (
                   <div className="alert alert-danger" role="alert">
-                    Tên sản phẩm không hợp lệ!
+                    Tên sách không hợp lệ!
                   </div>
                 )}
               </div>
@@ -221,7 +221,7 @@ const ProductForm = () => {
                 )}
               </div>
               <div className="col-sm-6 mt-5">
-                <label className="form-label">Thương hiệu</label>
+                <label className="form-label">Nhà xuất bản</label>
                 <select
                   className="form-control"
                   {...register("brand", { required: true })}
@@ -276,7 +276,7 @@ const ProductForm = () => {
                 )}
               </div>
               <div className="col-12 mt-5">
-                <label className="form-label mb-5">Hình ảnh sản phẩm</label>{" "}
+                <label className="form-label mb-5">Hình ảnh sách</label>{" "}
                 <br />
                 <div className="row">
                   <div

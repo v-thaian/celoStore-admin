@@ -45,16 +45,16 @@ const Brand = () => {
           className="btn btn-primary"
           style={{ borderRadius: 50 }}
         >
-          Thêm thương hiệu
+          Thêm nhà xuất bản
         </NavLink>
       </div>
       <table className="table table-bordered">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Tên thương hiệu</th>
+            <th scope="col">Tên nhà xuất bản</th>
             <th scope="col">Mô tả</th>
-            <th scope="col">Ngày tạo</th>
+            <th scope="col">Ngày bắt đầu hợp tác</th>
             <th scope="col">Trạng thái</th>
             <th scope="col">Cập nhật</th>
           </tr>

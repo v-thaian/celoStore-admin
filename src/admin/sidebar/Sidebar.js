@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./sidebar.css";
-import logo from "../../assets/images/logo-sneaker.png";
+import logo from "../../assets/images/celo-logo.png";
 // import sidebar_items from "../../assets/JsonData/sidebar_routes.json";
 import { Link } from "react-router-dom";
 
 const sidebar_items_1 = [
   {
-      "display_name": "Dashboard",
+      "display_name": "Tổng quan",
       "route": "/",
       "icon": "bx bx-category-alt"
   },
@@ -40,7 +40,7 @@ const sidebar_items_1 = [
       "icon": "bx bx-bar-chart-alt"
   },
   {
-      "display_name": "Loại sản phẩm",
+      "display_name": "Danh mục sách",
       "route": "/categories",
       "add": "/add-category",
       "modify": "/category-detail",
@@ -54,7 +54,7 @@ const sidebar_items_1 = [
       "icon": "bx bx-gift"
   },
   {
-      "display_name": "Thương hiệu",
+      "display_name": "Nhà xuất bản",
       "route": "/brand",
       "add": "/add-brand",
       "modify": "/brand-detail",

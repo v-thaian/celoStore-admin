@@ -45,7 +45,7 @@ const Category = () => {
           className="btn btn-primary"
           style={{ borderRadius: 50 }}
         >
-          Thêm loại sản phẩm
+          Thêm Danh mục sách
         </NavLink>
       </div>
       <table className="table table-bordered">

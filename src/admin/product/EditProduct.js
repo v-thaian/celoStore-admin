@@ -59,21 +59,21 @@ const EditProduct = () => {
   };
   const submitHandler = (data) => {
     const nums = [
-      data.size1,
-      data.size2,
-      data.size3,
-      data.size4,
-      data.size5,
-      data.size6,
-      data.size7,
-      data.size8,
-      data.size9,
-      data.size10,
+      data.type1,
+      data.type2,
+      data.type3,
+      data.type4,
+      data.type5,
+      data.type6,
+      data.type7,
+      data.type8,
+      data.type9,
+      data.type10,
     ];
     const newNums = nums.slice(0, count);
     const hasDuplicate = newNums.some(x => newNums.indexOf(x) !== newNums.lastIndexOf(x));
     if(hasDuplicate){
-      toast.warning("Nhập trùng size. Vui lòng nhập lại!");
+      toast.warning("Nhập trùng loại. Vui lòng nhập lại!");
     }else{
       const flag = {
         id: id,
@@ -85,52 +85,52 @@ const EditProduct = () => {
         categoryId: data.category,
         attribute: [
           {
-            size: data.size1,
+            type: data.type1,
             price: data.price1,
             stock: data.quantity1,
           },
           {
-            size: data.size2,
+            type: data.type2,
             price: data.price2,
             stock: data.quantity2,
           },
           {
-            size: data.size3,
+            type: data.type3,
             price: data.price3,
             stock: data.quantity3,
           },
           {
-            size: data.size4,
+            type: data.type4,
             price: data.price4,
             stock: data.quantity4,
           },
           {
-            size: data.size5,
+            type: data.type5,
             price: data.price5,
             stock: data.quantity5,
           },
           {
-            size: data.size6,
+            type: data.type6,
             price: data.price6,
             stock: data.quantity6,
           },
           {
-            size: data.size7,
+            type: data.type7,
             price: data.price7,
             stock: data.quantity7,
           },
           {
-            size: data.size8,
+            type: data.type8,
             price: data.price8,
             stock: data.quantity8,
           },
           {
-            size: data.size9,
+            type: data.type9,
             price: data.price9,
             stock: data.quantity9,
           },
           {
-            size: data.size10,
+            type: data.type10,
             price: data.price10,
             stock: data.quantity10,
           }
@@ -207,7 +207,7 @@ const EditProduct = () => {
                 )}
               </div>
               <div className="col-sm-6 mt-5">
-                <label className="form-label">Thương hiệu</label>
+                <label className="form-label">Nhà xuất bản</label>
                 <select
                   className="form-control"
                   {...register("brandId", { required: true })}
@@ -235,7 +235,7 @@ const EditProduct = () => {
                 </select>
               </div>
               <div className="col-12 mt-5 mb-5">
-                <label className="form-label mb-3">Loại sản phẩm</label> <br />
+                <label className="form-label mb-3">Danh mục</label> <br />
                 {cate &&
                   cate.map((i, index) => (
                     <div
@@ -278,20 +278,18 @@ const EditProduct = () => {
               <div className="card mr-3">
                 <div className="form-row">
                   <div className="form-group col-md-6">
-                    <label>Size</label>
+                    <label>Loại</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
-                      defaultValue={item.attributes[0] && item.attributes[0].size}
-                      {...register("size1", {
+                      defaultValue={item.attributes[0] && item.attributes[0].type}
+                      {...register("type1", {
                         required: true,
-                        min: 36,
-                        max: 45,
                       })}
                     />
-                    {errors.size1 && (
+                    {errors.type1 && (
                       <p className="text-danger mt-2">
-                        Size giày trong khoảng 36-45
+                        Loại sách không hợp lệ!
                       </p>
                     )}
                   </div>
@@ -335,21 +333,19 @@ const EditProduct = () => {
             {count >= 2 && (
               <div className="card mr-3">
                 <div className="form-row">
-                  <div className="form-group col-md-6">
-                    <label>Size</label>
+                <div className="form-group col-md-6">
+                    <label>Loại</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
-                      defaultValue={item.attributes[1] && item.attributes[1].size}
-                      {...register("size2", {
+                      defaultValue={item.attributes[1] && item.attributes[1].type}
+                      {...register("type2", {
                         required: true,
-                        min: 36,
-                        max: 45,
                       })}
                     />
-                    {errors.size2 && (
+                    {errors.type2 && (
                       <p className="text-danger mt-2">
-                        Size giày trong khoảng 36-45
+                        Loại sách không hợp lệ!
                       </p>
                     )}
                   </div>
@@ -393,21 +389,19 @@ const EditProduct = () => {
             {count >= 3 && (
               <div className="card mr-3">
                 <div className="form-row">
-                  <div className="form-group col-md-6">
-                    <label>Size</label>
+                <div className="form-group col-md-6">
+                    <label>Loại</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
-                      defaultValue={item.attributes[2] && item.attributes[2].size}
-                      {...register("size3", {
+                      defaultValue={item.attributes[2] && item.attributes[2].type}
+                      {...register("type3", {
                         required: true,
-                        min: 36,
-                        max: 45,
                       })}
                     />
-                    {errors.size3 && (
+                    {errors.type3 && (
                       <p className="text-danger mt-2">
-                        Size giày trong khoảng 36-45
+                        Loại sách không hợp lệ!
                       </p>
                     )}
                   </div>
@@ -452,20 +446,18 @@ const EditProduct = () => {
               <div className="card mr-3">
                 <div className="form-row">
                   <div className="form-group col-md-6">
-                    <label>Size</label>
+                    <label>Loại</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
-                      defaultValue={item.attributes[3] && item.attributes[3].size}
-                      {...register("size4", {
+                      defaultValue={item.attributes[3] && item.attributes[3].type}
+                      {...register("type4", {
                         required: true,
-                        min: 36,
-                        max: 45,
                       })}
                     />
-                    {errors.size4 && (
+                   {errors.type4 && (
                       <p className="text-danger mt-2">
-                        Size giày trong khoảng 36-45
+                        Loại sách không hợp lệ!
                       </p>
                     )}
                   </div>
@@ -510,20 +502,18 @@ const EditProduct = () => {
               <div className="card mr-3">
                 <div className="form-row">
                   <div className="form-group col-md-6">
-                    <label>Size</label>
+                    <label>Loại</label>
                     <input
                       type="number"
                       className="form-control"
-                      defaultValue={item.attributes[4] && item.attributes[4].size}
-                      {...register("size5", {
+                      defaultValue={item.attributes[4] && item.attributes[4].type}
+                      {...register("type5", {
                         required: true,
-                        min: 36,
-                        max: 45,
                       })}
                     />
-                    {errors.size5 && (
+                    {errors.type4 && (
                       <p className="text-danger mt-2">
-                        Size giày trong khoảng 36-45
+                        Loại sách không hợp lệ!
                       </p>
                     )}
                   </div>
