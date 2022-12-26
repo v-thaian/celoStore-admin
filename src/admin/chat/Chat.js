@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import './chat.css';
 import ChatFeed from './ChatFeed';
-import { ChatEngine } from 'react-chat-engine';
+import { ChatEngine, getOrCreateChat } from 'react-chat-engine';
 
-const projectID = 'b4f510a5-aa2d-41c4-bede-f05f433e0097';
+const projectID = '68ba8a77-2156-4bfd-8c38-4c4d2f5bfb87';
+const test = 'tanvx'
 
 const Chat = () => {
   return (
     <ChatEngine
-      height="100vh"
+      height="70vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}

@@ -77,14 +77,15 @@ const sidebar_items_2 = [
       "modify": "/order-detail",
       "sub": "/detail-order",
       "icon": "bx bx-cart"
-  },
-  {
-      "display_name": "Hộp thoại",
-      "route": "/chat",
-      "add": "/chat",
-      "modify": "/chat",
-      "icon": "bx bx-user-pin"
   }
+  // ,
+  // {
+  //     "display_name": "Hộp thoại",
+  //     "route": "/chat",
+  //     "add": "/chat",
+  //     "modify": "/chat",
+  //     "icon": "bx bx-user-pin"
+  // }
 ]
 const SidebarItem = (props) => {
   const active = props.active ? "active" : "";

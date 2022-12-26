@@ -95,7 +95,6 @@ const Product = () => {
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Tên sách</th>
-                    <th scope="col">Mã sách</th>
                     <th scope="col">Nhà xuất bản</th>
                     <th scope="col">Ảnh mô tả</th>
                     <th scope="col">Trạng thái</th>
@@ -112,7 +111,6 @@ const Product = () => {
                           </NavLink>
                         </th>
                         <th>{item.name}</th>
-                        <th>{item.code}</th>
                         <th>{item.brand}</th>
                         <th>
                           {" "}
